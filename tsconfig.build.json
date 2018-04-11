@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "inlineSources": true,
+    "jsx": "react",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "outDir": "dist",
+    "lib": [
+      "es6",
+      "dom"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "./src/test"
+  ]
+}

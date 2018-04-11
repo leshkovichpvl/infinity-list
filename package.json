@@ -1,0 +1,42 @@
+{
+  "name": "infinity-list",
+  "version": "0.0.865",
+  "description": "React infinity loader list",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "author": "Leshkovich Pavel",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config ./.webpack/webpack.dev.config.js",
+    "buildWebpack": "webpack -p --config ./.webpack/webpack.build.config.js",
+    "build": "rm -rf ./dist && tsc --p tsconfig.build.json && cp -rf package.json ./dist"
+  },
+  "devDependencies": {
+    "@types/autobahn": "^0.9.38",
+    "@types/react": "^16.0.25",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-virtualized": "^9.7.7",
+    "awesome-typescript-loader": "^3.4.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "html-webpack-plugin": "^2.30.1",
+    "immutable": "^3.8.2",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.5"
+  },
+  "dependencies": {
+    "react-custom-scrollbars": "^4.2.1",
+    "react-virtualized": "^9.13.0"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0",
+    "immutable": "^3.8.2"
+  }
+}
