@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {List as VirtualList } from 'react-virtualized/dist/commonjs/List';
+import { List as VirtualList } from 'react-virtualized/dist/commonjs/List';
 import { AutoSizer } from 'react-virtualized/dist/commonjs/AutoSizer';
 import { InfiniteLoader } from 'react-virtualized/dist/commonjs/InfiniteLoader';
 import { LoadableDataRecord } from './LoadableDataRecord';
@@ -28,7 +28,7 @@ export class InfiniteList extends React.PureComponent<IInfiniteListProps, undefi
                     loadMoreRows={this.loadMoreRows}
                     rowCount={loadableData.dataCount}
                 >
-                    {({onRowsRendered, registerChild}) => (
+                    {({onRowsRendered}) => (
                         <CustomScrollBar
                             width={width}
                             height={height}
@@ -42,7 +42,7 @@ export class InfiniteList extends React.PureComponent<IInfiniteListProps, undefi
                                 rowCount={loadableData.dataCount}
                                 rowHeight={rowHeight}
                                 rowRenderer={this.rowRenderer}
-                                style={{overflowX: 'initial', overflowY: 'initial'}}
+                                style={defaultListStyle}
                             />
                         </CustomScrollBar>
                     )}
@@ -82,6 +82,8 @@ export class InfiniteList extends React.PureComponent<IInfiniteListProps, undefi
         return this.props.elementCreator(item, style);
     };
 }
+
+const defaultListStyle: React.CSSProperties = {overflowX: 'initial', overflowY: 'initial'};
 
 const awaiter = (isCompleted: () => boolean) => {
     const _await = resolve => setTimeout(() => {
