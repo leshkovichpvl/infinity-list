@@ -1,1 +1,1 @@
-# Infinity data loader list for react apps. It can work with immutable data.
+# Infinity data loader list for react apps, with immutable data support.
