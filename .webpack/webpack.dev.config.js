@@ -34,7 +34,6 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: "7877",
             template: "index.ejs",
             inject: false
         })
