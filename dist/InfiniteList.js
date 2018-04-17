@@ -9,6 +9,14 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -95,7 +103,7 @@ var InfiniteList = /** @class */ (function (_super) {
             return React.createElement(InfiniteLoader_1.InfiniteLoader, { isRowLoaded: _this.isRowLoaded, loadMoreRows: _this.loadMoreRows, rowCount: loadableData.dataCount }, function (_a) {
                 var onRowsRendered = _a.onRowsRendered;
                 return (React.createElement(CustomScrollBar_1.CustomScrollBar, { width: width, height: height, handleScroll: _this.handleScroll },
-                    React.createElement(List_1.List, { height: height, width: width, onRowsRendered: onRowsRendered, ref: function (r) { return _this._virtualList = r; }, rowCount: loadableData.dataCount, rowHeight: rowHeight, rowRenderer: _this.rowRenderer, style: defaultListStyle })));
+                    React.createElement(List_1.List, __assign({}, loadableData.packs, { height: height, width: width, onRowsRendered: onRowsRendered, ref: function (r) { return _this._virtualList = r; }, rowCount: loadableData.dataCount, rowHeight: rowHeight, rowRenderer: _this.rowRenderer, style: defaultListStyle }))));
             });
         });
     };
