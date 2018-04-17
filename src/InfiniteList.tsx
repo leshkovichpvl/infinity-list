@@ -35,6 +35,7 @@ export class InfiniteList extends React.PureComponent<IInfiniteListProps, undefi
                             handleScroll={this.handleScroll}
                         >
                             <VirtualList
+                                {...loadableData.packs}
                                 height={height}
                                 width={width}
                                 onRowsRendered={onRowsRendered}
